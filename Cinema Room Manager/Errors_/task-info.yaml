@@ -13,7 +13,6 @@ files:
 - name: test/CinemaTests.java
   visible: false
   text: |
-    import cinema.CinemaKt;
     import org.hyperskill.hstest.dynamic.input.DynamicTestingMethod;
     import org.hyperskill.hstest.exception.outcomes.WrongAnswer;
     import org.hyperskill.hstest.stage.StageTest;
@@ -25,7 +24,7 @@ files:
         @DynamicTestingMethod
         CheckResult test1_checkExit() {
 
-            TestedProgram program = new TestedProgram(CinemaKt.class);
+            TestedProgram program = new TestedProgram();
             String output = program.start().strip();
 
             if (!output.toLowerCase().contains("enter the number of rows")) {
@@ -69,7 +68,7 @@ files:
             TestedProgram program;
             String output;
 
-            program = new TestedProgram(CinemaKt.class);
+            program = new TestedProgram();
             program.start();
             program.execute("7\n8");
 
@@ -85,7 +84,7 @@ files:
 
             program.stop();
 
-            program = new TestedProgram(CinemaKt.class);
+            program = new TestedProgram();
             program.start();
             program.execute("2\n2");
 
@@ -94,7 +93,7 @@ files:
 
             program.stop();
 
-            program = new TestedProgram(CinemaKt.class);
+            program = new TestedProgram();
             program.start();
             program.execute("9\n9");
 
@@ -111,7 +110,7 @@ files:
             TestedProgram program;
             String output;
 
-            program = new TestedProgram(CinemaKt.class);
+            program = new TestedProgram();
             program.start();
             program.execute("7\n8");
 
@@ -163,7 +162,7 @@ files:
             TestedProgram program;
             String output;
 
-            program = new TestedProgram(CinemaKt.class);
+            program = new TestedProgram();
             program.start();
             program.execute("9\n9");
 
@@ -211,7 +210,7 @@ files:
             TestedProgram program;
             String output;
 
-            program = new TestedProgram(CinemaKt.class);
+            program = new TestedProgram();
             program.start();
 
             program.execute("9\n9");
@@ -291,7 +290,7 @@ files:
             TestedProgram program;
             String output;
 
-            program = new TestedProgram(CinemaKt.class);
+            program = new TestedProgram();
             program.start();
             program.execute("9\n9");
 
@@ -608,5 +607,8 @@ files:
     }
   learner_created: false
 feedback_link: https://hyperskill.org/projects/138/stages/739/implement#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Sat, 30 Jan 2021 13:01:31 UTC
 record: -1
